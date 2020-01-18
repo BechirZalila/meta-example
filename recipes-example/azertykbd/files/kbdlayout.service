@@ -1,0 +1,9 @@
+[Unit]
+Description=Loads custom keymap if available
+ConditionPathExists=/usr/share/keymaps/i386/azerty/fr-latin1.map.gz
+
+[Service]
+ExecStart=/bin/sh -c '/usr/bin/loadkeys /usr/share/keymaps/i386/azerty/fr-latin1.map.gz'
+
+[Install]
+WantedBy=multi-user.target
