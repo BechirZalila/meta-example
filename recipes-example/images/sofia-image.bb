@@ -22,13 +22,12 @@ DESCRIPTION = "Image personnalisée avec clavier azerty et plein \
               d'autres fonctionnalités"
 
 # Extra tools for all machines
-IMAGE_INSTALL += " bridge-utils hostapd dhcp-server iptables dropbear"
-IMAGE_INSTALL += " bbexample azertykbd newuser"
+IMAGE_INSTALL_append = " bridge-utils hostapd dhcp-server iptables dropbear"
+IMAGE_INSTALL_append = " bbexample azertykbd newuser"
 
 # Raspberry Pi specific options:
 DISTRO_FEATURES_raspberrypi3 += " bluez5 bluetooth wifi"
-IMAGE_INSTALL_raspberrypi3 += " linux-firmware-bcm43430 bluez5 i2c-tools python-smbus wpa-supplicant"
-DISABLE_VC4GRAPHICS_raspberrypi3 = "1"
+IMAGE_INSTALL_raspberrypi3_append = " linux-firmware-bcm43430 bluez5 i2c-tools python-smbus wpa-supplicant"
 GPU_MEM_raspberrypi3 = "16"
 
 #Custom password for root and pi
