@@ -20,7 +20,7 @@ USERADD_PACKAGES = "${PN}"
 # useradd command. Multiple users can be created by separating
 # the commands with a semicolon. Here we'll create two users,
 # user1 and user2:
-USERADD_PARAM_${PN} = "-u 1000 -d /home/pi -r -s /bin/bash pi"
+USERADD_PARAM_${PN} = "-u 1000 -d /home/pi -r -s /bin/sh pi"
 
 do_install () {
         install -d -m 755 ${D}/home/pi
