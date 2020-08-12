@@ -11,8 +11,8 @@ inherit systemd
 SRC_URI = "file://kbdlayout.service"
 
 do_install () {
-    install -d ${D}/${base_libdir}/systemd/system
-    install -m 0644 ${WORKDIR}/kbdlayout.service ${D}/${base_libdir}/systemd/system/
+    install -d ${D}${base_libdir}/systemd/system
+    install -m 0644 ${WORKDIR}/kbdlayout.service ${D}${base_libdir}/systemd/system/
 }
 
 NATIVE_SYSTEMD_SUPPORT = "1"
