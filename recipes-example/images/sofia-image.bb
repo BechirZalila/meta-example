@@ -22,8 +22,8 @@ DESCRIPTION = "Image personnalisée avec clavier azerty et plein \
               d'autres fonctionnalités"
 
 # Extra tools for all machines
-IMAGE_INSTALL_append = " bridge-utils hostapd dhcp-server iptables dropbear"
-IMAGE_INSTALL_append = " bbexample azertykbd newuser"
+IMAGE_INSTALL_append = " bridge-utils hostapd dhcp-server iptables dropbear busybox"
+IMAGE_INSTALL_append = " bbexample azertykbd-systemd newuser"
 
 # Raspberry Pi specific options:
 DISTRO_FEATURES_raspberrypi3 += " bluez5 bluetooth wifi"
