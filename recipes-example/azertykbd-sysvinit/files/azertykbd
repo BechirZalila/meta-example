@@ -1,0 +1,10 @@
+#! /bin/sh
+
+start () {
+	/usr/bin/loadkeys /usr/share/keymaps/i386/azerty/fr-latin1.map.gz
+}
+
+case "$1" in
+	"start") start ;;
+	*) exit 0 ;;
+esac
